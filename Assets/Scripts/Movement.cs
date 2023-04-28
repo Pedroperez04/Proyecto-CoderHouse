@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
     [SerializeField] private Animator m_animator;
     [SerializeField] private float m_movementSpeed = 1f;
     [SerializeField] private float m_rotationSpeed = 50f;
@@ -66,7 +65,10 @@ public class Movement : MonoBehaviour
         {
             m_animator.SetBool("CrouchedDown", true);
         }
-        else { m_animator.SetBool("CrouchedDown", false); }
+        else 
+        {
+            m_animator.SetBool("CrouchedDown", false);
+        }
     }
 
     
