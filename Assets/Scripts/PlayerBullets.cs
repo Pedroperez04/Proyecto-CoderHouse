@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerBullets : MonoBehaviour
 {
-    [SerializeField] private float m_bulletSpeed = 1f;
+    [SerializeField] private float m_bulletSpeed = 10f;
     [SerializeField] private float m_destroyBulletTime = 5f;
     private float m_canDestroy;
 
