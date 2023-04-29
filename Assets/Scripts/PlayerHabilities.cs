@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerHabilities : MonoBehaviour
 {
+    [SerializeField] Animator m_Animator;
     [SerializeField] PlayerBullets m_normalBullet;
     [SerializeField] PlayerBullets m_specialHability1Bullet;
     [SerializeField] Transform m_shootingPoint;
     [SerializeField] private float m_habilityCooldown = 1f;
     private float m_canShoot;
+
 
     private void Awake()
     {
@@ -25,11 +27,13 @@ public class PlayerHabilities : MonoBehaviour
     void Update()
     {
         m_canShoot -= Time.deltaTime;
-        if (Input.GetMouseButton(0) && m_canShoot <= 0) 
+        if (m_canShoot <= 0) 
         {
+            
             NormalShoot();
         }
-        if (Input.GetMouseButton(1) && m_canShoot <= 0)
+        
+        if (Input.GetKey(KeyCode.Q) && m_canShoot <= 0)
         {
             SpecialHability1Shoot();
         }
@@ -38,8 +42,16 @@ public class PlayerHabilities : MonoBehaviour
     
     private void NormalShoot ()
     {
-        Instantiate(m_normalBullet, m_shootingPoint.position,Quaternion.identity);
-        m_canShoot = m_habilityCooldown;
+        if (Input.GetMouseButtonDown(0))
+        {
+            m_Animator.SetBool("Shooting", true);
+            Instantiate(m_normalBullet, m_shootingPoint.position, Quaternion.identity);
+            m_canShoot = m_habilityCooldown;
+        }
+        else
+        {
+            m_Animator.SetBool("Shooting", false);
+        }
     }
 
     private void SpecialHability1Shoot ()
