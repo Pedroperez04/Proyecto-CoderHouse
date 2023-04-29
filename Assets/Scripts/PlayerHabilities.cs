@@ -28,8 +28,7 @@ public class PlayerHabilities : MonoBehaviour
     {
         m_canShoot -= Time.deltaTime;
         if (m_canShoot <= 0) 
-        {
-            
+        {            
             NormalShoot();
         }
         
@@ -45,7 +44,8 @@ public class PlayerHabilities : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             m_Animator.SetBool("Shooting", true);
-            Instantiate(m_normalBullet, m_shootingPoint.position, Quaternion.identity);
+            StartCoroutine("INormalShootWait");
+           
             m_canShoot = m_habilityCooldown;
         }
         else
@@ -58,5 +58,11 @@ public class PlayerHabilities : MonoBehaviour
     {
         Instantiate (m_specialHability1Bullet,m_shootingPoint.position, Quaternion.identity);
         m_canShoot = m_habilityCooldown;
+    }
+
+    IEnumerator INormalShootWait()
+    {
+        yield return new WaitForSeconds(1f);
+        Instantiate(m_normalBullet, m_shootingPoint.position, m_shootingPoint.rotation);
     }
 }
