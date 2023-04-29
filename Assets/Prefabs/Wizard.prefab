@@ -151,7 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217411087}
-  m_LocalRotation: {x: 0.32792288, y: 0.25248125, z: -0.091410816, w: 0.9057394}
+  m_LocalRotation: {x: 0.32792288, y: 0.25248122, z: -0.0914108, w: 0.9057394}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -573,7 +573,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874010315}
-  m_LocalRotation: {x: 0.10875016, y: 0.26321614, z: -0.029875934, w: 0.9581222}
+  m_LocalRotation: {x: 0.10875015, y: 0.26321614, z: -0.029875932, w: 0.9581222}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1891,6 +1891,7 @@ GameObject:
   - component: {fileID: 4441582707984148651}
   - component: {fileID: 4650996166610502072}
   - component: {fileID: 1622916190065247806}
+  - component: {fileID: 174212486}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Untagged
@@ -2042,6 +2043,24 @@ MonoBehaviour:
   m_speedZoom: 0.1
   m_zoomPoint: {fileID: 651762008736219889}
   m_vectorPoint: {x: 1, y: 1.5, z: 0}
+--- !u!114 &174212486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382638381549518706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec42a136b9036154aafd5d5711abeda8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 7023854118520094642}
+  m_normalBullet: {fileID: -4823631052070810403, guid: 9d4c32ae21e86754092ba2e90b16bb41,
+    type: 3}
+  m_specialHability1Bullet: {fileID: 0}
+  m_shootingPoint: {fileID: 651762008736219889}
+  m_habilityCooldown: 1
 --- !u!1 &4502831391019723606
 GameObject:
   m_ObjectHideFlags: 0
