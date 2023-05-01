@@ -12968,9 +12968,10 @@ GameObject:
   - component: {fileID: 7439563146030026448}
   - component: {fileID: 2340100259357947532}
   - component: {fileID: 1358361739}
+  - component: {fileID: 857600750}
   m_Layer: 0
   m_Name: EnemyOne
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13062,6 +13063,21 @@ MonoBehaviour:
   m_distanceToChase: 10
   m_enemySpeed: 3
   m_animator: {fileID: 7242022838211228953}
+--- !u!114 &857600750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7242022838201862087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c05810512658488e8d8c43d667b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_animator: {fileID: 7242022838211228953}
+  m_life: 100
+  m_normalShootDamage: 20
 --- !u!1 &7242022838201862089
 GameObject:
   m_ObjectHideFlags: 0
