@@ -6,19 +6,19 @@ public class EnemyLife : MonoBehaviour
 {
     [SerializeField] Animator m_animator;
     [SerializeField] float m_life = 100f;
-    private float m_normalShootDamage = 20f;
-
+    private PlayerBullets m_normalBullet;    
+    private float m_normalShootDamage;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        m_normalShootDamage = m_normalBullet.m_normalShootDamage;
     }
 
     private void OnCollisionEnter(Collision collision)

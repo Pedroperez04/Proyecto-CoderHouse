@@ -6,7 +6,7 @@ public class PlayerBullets : MonoBehaviour
 {
     [SerializeField] private float m_bulletSpeed = 20f;
     [SerializeField] private float m_destroyBulletTime = 5f;
-   // [SerializeField] public float m_normalShootDamage = 20f;
+    [SerializeField] public float m_normalShootDamage = 20f;
     private float m_canDestroy;
 
     private void Awake()
