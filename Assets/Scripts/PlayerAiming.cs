@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class Aiming : MonoBehaviour
+public class PlayerAiming : MonoBehaviour
 {
     [SerializeField] Animator m_animator;
     public CinemachineFreeLook m_fCam;

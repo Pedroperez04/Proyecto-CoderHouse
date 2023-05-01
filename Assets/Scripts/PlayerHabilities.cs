@@ -45,7 +45,7 @@ public class PlayerHabilities : MonoBehaviour
         {
             m_Animator.SetBool("Shooting", true);
             StartCoroutine("INormalShootWait");
-           
+            
             m_canShoot = m_habilityCooldown;
         }
         else
@@ -63,6 +63,6 @@ public class PlayerHabilities : MonoBehaviour
     IEnumerator INormalShootWait()
     {
         yield return new WaitForSeconds(1f);
-        Instantiate(m_normalBullet, m_shootingPoint.position, m_shootingPoint.rotation);
+        var l_currentBullet =  Instantiate(m_normalBullet, m_shootingPoint.position, m_shootingPoint.rotation);        
     }
 }
