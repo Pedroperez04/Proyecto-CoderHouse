@@ -29,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
         var l_diffVector = m_playerTarget.position - transform.position;
         Quaternion l_newRotation = Quaternion.LookRotation(l_diffVector.normalized);
         transform.rotation = Quaternion.Lerp(transform.rotation, l_newRotation, m_enemySpeed * Time.deltaTime);
-        if(m_distanceToChase > l_diffVector.magnitude && 2 < l_diffVector.magnitude) 
+        if(m_distanceToChase > l_diffVector.magnitude && 1 < l_diffVector.magnitude) 
         {
             Move(l_diffVector.normalized);
             m_animator.SetBool("Run", true);
