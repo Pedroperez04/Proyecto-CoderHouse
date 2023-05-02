@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTypes : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private Transform m_playerTarget;
     [SerializeField] private float m_distanceToChase = 10f;
@@ -24,7 +24,7 @@ public class EnemyTypes : MonoBehaviour
     {
         transform.position += p_direction * (m_enemySpeed * Time.deltaTime);
     }
-    private void Chase()
+    public void Chase()
     {
         var l_diffVector = m_playerTarget.position - transform.position;
         Quaternion l_newRotation = Quaternion.LookRotation(l_diffVector.normalized);
