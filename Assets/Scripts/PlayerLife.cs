@@ -6,13 +6,13 @@ public class PlayerLife : MonoBehaviour
 {
     [SerializeField] Animator m_animator;
     [SerializeField] private float m_life;
-    public EnemyAttacks m_enemyAttacks;
+    public EnemyBehavior m_enemyAttacks;
     private float m_enemyAttackDamage;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_enemyAttackDamage = m_enemyAttacks.m_enemyAttackDamage;
+        m_enemyAttackDamage = m_enemyAttacks.m_enemyDamage;
     }
 
     // Update is called once per frame
@@ -20,24 +20,36 @@ public class PlayerLife : MonoBehaviour
     {
         
     }
- 
-    private void OnCollisionEnter(Collision p_collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (p_collision.gameObject.GetComponentInParent<EnemyAttacks>())
+        if (other.CompareTag("EnemyAxe"))
         {
-            EnemyAttacks l_enemyAttacks = p_collision.gameObject.GetComponentInParent<EnemyAttacks>();
-            if(l_enemyAttacks != null) 
-            {
-                TakeDamage(m_enemyAttackDamage);
-            }
+            StartCoroutine("IPlayerGetHitWait");
+            TakeDamage(m_enemyAttackDamage);
         }
+
     }
     private void TakeDamage(float p_damage)
     {
         m_life -= p_damage;
         if (m_life <= 0 )
         {
-            Debug.Log("Death");
+            StartCoroutine("IPlayerDeathWait");
         }
+    }
+
+    IEnumerator IPlayerGetHitWait()
+    {
+        m_animator.SetBool("GetHit", true);
+        yield return new WaitForSeconds(0.2f);
+        m_animator.SetBool("GetHit", false);
+    }
+
+    IEnumerator IPlayerDeathWait()
+    {
+        m_animator.SetBool("Death", true);
+        yield return new WaitForSeconds(5f);
+        Destroy(this.gameObject);
     }
 }

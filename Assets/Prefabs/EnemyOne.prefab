@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 7058929810122514322}
   m_Layer: 0
   m_Name: Shooting point
-  m_TagString: Untagged
+  m_TagString: EnemyAxe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13098,7 +13098,6 @@ GameObject:
   - component: {fileID: 2340100259357947532}
   - component: {fileID: 1358361739}
   - component: {fileID: 857600750}
-  - component: {fileID: 3291891988691044565}
   m_Layer: 0
   m_Name: EnemyOne
   m_TagString: Enemy
@@ -13190,10 +13189,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268e98a7e32f8e040a02377351fdd504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerTarget: {fileID: 0}
-  m_distanceToChase: 5
-  m_enemySpeed: 10
+  m_distanceToChase: 10
+  m_enemySpeed: 1
   m_animator: {fileID: 7242022838211228953}
+  m_enemyDamage: 20
   m_enemyRutine: 0
   m_enemyTimer: 0
   m_enemyQuaternion: {x: 0, y: 0, z: 0, w: 0}
@@ -13216,21 +13215,6 @@ MonoBehaviour:
   m_life: 100
   m_normalBullet: {fileID: -4823631052070810403, guid: 9d4c32ae21e86754092ba2e90b16bb41,
     type: 3}
---- !u!114 &3291891988691044565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7242022838201862087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6242ea80d57a6aa4ca486d1e552c16eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_animator: {fileID: 7242022838211228953}
-  m_playerTarget: {fileID: 0}
-  m_enemyAttackDamage: 20
 --- !u!1 &7242022838201862089
 GameObject:
   m_ObjectHideFlags: 0
