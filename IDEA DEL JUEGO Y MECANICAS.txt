@@ -1,0 +1,11 @@
+TEXTO DE EXPLICACION DEL JUEGO:
+
+Es un shooter en tercera persona por oleadas, hasta ahora solo hecha la primera, en el cual el personaje es
+un mago de fuego el cual al ir derrotando enemigos y pasando oleadas gana experiencia 
+y sube de nivel, lo que hace que desbloquee mejoras de daño, velocidad y etc, hasta llegar al boss final.
+
+Para esta entrega esta hecha la primera oleada unicamente, y las mecanicas del personaje son simples:
+se mueve con wasd, corre al mantener apretado el shift izquierdo y se agacha al tener presionado el control
+izquierdo. dispara con el click izquierdo del mouse y con el click derecho hace zoom. tenia pensado agregarle 
+dos o tres habilidades mas al personaje despues de esta entrega, como tambien diferentes tipos de enemigos
+y si me da el tiempo que pueda elegirse al principio del juego el tipo de magia a usar, si puedo 2 o 3 tipos mas.
