@@ -13190,7 +13190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_distanceToChase: 10
-  m_enemySpeed: 1
+  m_enemySpeed: 2
   m_animator: {fileID: 7242022838211228953}
   m_enemyDamage: 20
   m_enemyRutine: 0
