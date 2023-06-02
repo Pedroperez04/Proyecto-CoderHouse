@@ -17,6 +17,7 @@ public class EnemyLife : MonoBehaviour
     private float m_normalShootDamage;
     public int m_enemyDropPoints;
     private GameManager m_gameManager;
+    private ScoreManager m_scoreManager;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class EnemyLife : MonoBehaviour
         m_normalShootDamage = m_normalBullet.m_normalShootDamage;
         ChooseEnemy(enemyType);
         m_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        m_scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 
 
@@ -79,7 +81,7 @@ public class EnemyLife : MonoBehaviour
     public IEnumerator IDeathWait()
     {
         m_animator.SetBool("Death", true);
-        GameManager.Instance.PlayerScore(m_enemyDropPoints);
+        m_scoreManager.PlayerGetPoints(m_enemyDropPoints);
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
         m_gameManager.m_defeatedEnemies += 1;
