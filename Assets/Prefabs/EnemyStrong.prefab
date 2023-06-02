@@ -13251,10 +13251,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 2
   m_animator: {fileID: 7242022838211228953}
-  m_life: 100
+  m_lifeData: {fileID: 11400000, guid: b4a8cd6d7c14f1d46a407ab8c2f283a0, type: 2}
   m_normalBullet: {fileID: -4823631052070810403, guid: 9d4c32ae21e86754092ba2e90b16bb41,
     type: 3}
   m_enemyDropPoints: 0
+  m_dropPointsData: {fileID: 11400000, guid: b4a8cd6d7c14f1d46a407ab8c2f283a0, type: 2}
 --- !u!1 &7242022838201862089
 GameObject:
   m_ObjectHideFlags: 0
