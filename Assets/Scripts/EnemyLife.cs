@@ -12,10 +12,16 @@ public class EnemyLife : MonoBehaviour
     }
     [SerializeField] EnemyType enemyType;
     [SerializeField] Animator m_animator;
-    [SerializeField] float m_life = 100f;
+
+    float m_life;
+    [SerializeField] private EnemyLifeData m_lifeData;
+
     public PlayerBullets m_normalBullet;
     private float m_normalShootDamage;
+
     public int m_enemyDropPoints;
+    public EnemyLifeData m_dropPointsData;
+
     private GameManager m_gameManager;
     private ScoreManager m_scoreManager;
 
@@ -26,6 +32,8 @@ public class EnemyLife : MonoBehaviour
         ChooseEnemy(enemyType);
         m_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         m_scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        m_life = m_lifeData.m_lifeData;
+        m_enemyDropPoints = m_dropPointsData.m_dropPointsData;
     }
 
 
@@ -48,16 +56,16 @@ public class EnemyLife : MonoBehaviour
         switch (enemyType) 
         {
             case EnemyType.EnemyWeak:
-                m_life = 60;
-                m_enemyDropPoints = 5;
+                //m_life = 60;
+                //m_enemyDropPoints = 5;
                 break;
             case EnemyType.EnemyMiddle:
-                m_life = 80;
-                m_enemyDropPoints = 10;
+                //m_life = 80;
+                //m_enemyDropPoints = 10;
                 break;
             case EnemyType.EnemyStrong:
-                m_life = 100;
-                m_enemyDropPoints = 15;
+                //m_life = 100;
+                //m_enemyDropPoints = 15;
                 break;
         }
     }

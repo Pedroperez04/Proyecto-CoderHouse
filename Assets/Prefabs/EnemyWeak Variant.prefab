@@ -11,10 +11,20 @@ PrefabInstance:
       propertyPath: enemyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 857600750, guid: 03228ebb154d829419e0ed3940352524, type: 3}
+      propertyPath: m_lifeData
+      value: 
+      objectReference: {fileID: 11400000, guid: 3fb5e4c3d068a0f4ba015b3b2506e5c8,
+        type: 2}
+    - target: {fileID: 857600750, guid: 03228ebb154d829419e0ed3940352524, type: 3}
+      propertyPath: m_dropPointsData
+      value: 
+      objectReference: {fileID: 11400000, guid: 3fb5e4c3d068a0f4ba015b3b2506e5c8,
+        type: 2}
     - target: {fileID: 7242022838201862087, guid: 03228ebb154d829419e0ed3940352524,
         type: 3}
       propertyPath: m_Name
-      value: EnemyWeak
+      value: EnemyWeak Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7242022838202162151, guid: 03228ebb154d829419e0ed3940352524,
         type: 3}

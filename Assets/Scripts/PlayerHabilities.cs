@@ -5,78 +5,19 @@ using UnityEngine.UI;
 
 public class PlayerHabilities : MonoBehaviour
 {
-    [SerializeField] Animator m_Animator;
-    [SerializeField] PlayerBullets m_normalBullet;
-    [SerializeField] PlayerBullets m_specialHability1Bullet;
-    [SerializeField] Transform m_shootingPoint;
+     public Animator m_Animator;
+     public PlayerBullets m_Bullet;
+     public Transform m_shootingPoint;
 
 
-    public Image m_HabilityOneImage;
-    [SerializeField] private float m_habilityCooldown = 1f;
-    private float m_canShoot;
-
-
-    private void Awake()
-    {
-        m_canShoot = m_habilityCooldown;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        m_HabilityOneImage.fillAmount = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        m_canShoot -= Time.deltaTime;
-        if (m_canShoot <= 0 ) 
-        {            
-            NormalShoot();
-        }
-        
-        if (Input.GetKey(KeyCode.Q) && m_canShoot <= 0)
-        {
-            SpecialHability1Shoot();
-        }
-
-    }
-    
-    private void NormalShoot ()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            m_Animator.SetBool("Shooting", true);
-            StartCoroutine("INormalShootWait");
-
-
-            m_HabilityOneImage.fillAmount = 1;
-            m_canShoot = m_habilityCooldown;
-        }
-        else
-        {
-
-            m_HabilityOneImage.fillAmount -= 1 / m_habilityCooldown * Time.deltaTime;
-            
-            if(m_HabilityOneImage.fillAmount <= 0)
-            {
-                m_HabilityOneImage.fillAmount = 0;
-            }
-            m_Animator.SetBool("Shooting", false);
-        }
-    }
-
-    private void SpecialHability1Shoot ()
-    {
-        Instantiate (m_specialHability1Bullet,m_shootingPoint.position, Quaternion.identity);
-        m_canShoot = m_habilityCooldown;
-    }
+     public Image m_HabilityImage;
+     protected float m_habilityCooldown = 1f;
+     protected float m_canShoot;
 
     IEnumerator INormalShootWait()
     {
         yield return new WaitForSeconds(1f);
-        var l_currentBullet =  Instantiate(m_normalBullet, m_shootingPoint.position, m_shootingPoint.rotation);
+        var l_currentBullet =  Instantiate(m_Bullet, m_shootingPoint.position, m_shootingPoint.rotation);
        
     }
 }
