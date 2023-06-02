@@ -14,22 +14,18 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] Animator m_animator;
     [SerializeField] float m_life = 100f;
     public PlayerBullets m_normalBullet;
-    private float m_normalShootDamage;    
-    
+    private float m_normalShootDamage;
+    public int m_enemyDropPoints;
+    private GameManager m_gameManager;
 
     // Start is called before the first frame update
     void Start()
     {        
         m_normalShootDamage = m_normalBullet.m_normalShootDamage;
         ChooseEnemy(enemyType);
+        m_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
 
     private void OnCollisionEnter(Collision p_collision)
     {
@@ -51,12 +47,15 @@ public class EnemyLife : MonoBehaviour
         {
             case EnemyType.EnemyWeak:
                 m_life = 60;
+                m_enemyDropPoints = 5;
                 break;
             case EnemyType.EnemyMiddle:
                 m_life = 80;
+                m_enemyDropPoints = 10;
                 break;
             case EnemyType.EnemyStrong:
                 m_life = 100;
+                m_enemyDropPoints = 15;
                 break;
         }
     }
@@ -65,6 +64,7 @@ public class EnemyLife : MonoBehaviour
         m_life -= p_damage;        
         if (m_life <= 0)
         {
+ 
             StartCoroutine("IDeathWait");
         }
     }  
@@ -76,10 +76,12 @@ public class EnemyLife : MonoBehaviour
         m_animator.SetBool("GetHit", false);
     }
 
-    IEnumerator IDeathWait()
+    public IEnumerator IDeathWait()
     {
         m_animator.SetBool("Death", true);
-        yield return new WaitForSeconds(5f);
+        GameManager.Instance.PlayerScore(m_enemyDropPoints);
+        yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
+        m_gameManager.m_defeatedEnemies += 1;
     }
 }
