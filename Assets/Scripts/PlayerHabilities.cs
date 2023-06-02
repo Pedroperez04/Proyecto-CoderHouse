@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHabilities : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class PlayerHabilities : MonoBehaviour
     [SerializeField] PlayerBullets m_normalBullet;
     [SerializeField] PlayerBullets m_specialHability1Bullet;
     [SerializeField] Transform m_shootingPoint;
+
+
+    public Image m_HabilityOneImage;
     [SerializeField] private float m_habilityCooldown = 1f;
     private float m_canShoot;
 
@@ -20,14 +24,14 @@ public class PlayerHabilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_HabilityOneImage.fillAmount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         m_canShoot -= Time.deltaTime;
-        if (m_canShoot <= 0) 
+        if (m_canShoot <= 0 ) 
         {            
             NormalShoot();
         }
@@ -45,11 +49,20 @@ public class PlayerHabilities : MonoBehaviour
         {
             m_Animator.SetBool("Shooting", true);
             StartCoroutine("INormalShootWait");
-            
+
+
+            m_HabilityOneImage.fillAmount = 1;
             m_canShoot = m_habilityCooldown;
         }
         else
         {
+
+            m_HabilityOneImage.fillAmount -= 1 / m_habilityCooldown * Time.deltaTime;
+            
+            if(m_HabilityOneImage.fillAmount <= 0)
+            {
+                m_HabilityOneImage.fillAmount = 0;
+            }
             m_Animator.SetBool("Shooting", false);
         }
     }
@@ -63,6 +76,7 @@ public class PlayerHabilities : MonoBehaviour
     IEnumerator INormalShootWait()
     {
         yield return new WaitForSeconds(1f);
-        var l_currentBullet =  Instantiate(m_normalBullet, m_shootingPoint.position, m_shootingPoint.rotation);        
+        var l_currentBullet =  Instantiate(m_normalBullet, m_shootingPoint.position, m_shootingPoint.rotation);
+       
     }
 }
