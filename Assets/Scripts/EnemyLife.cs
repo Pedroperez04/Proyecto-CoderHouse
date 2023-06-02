@@ -16,20 +16,16 @@ public class EnemyLife : MonoBehaviour
     public PlayerBullets m_normalBullet;
     private float m_normalShootDamage;
     public int m_enemyDropPoints;
+    private GameManager m_gameManager;
 
     // Start is called before the first frame update
     void Start()
     {        
         m_normalShootDamage = m_normalBullet.m_normalShootDamage;
         ChooseEnemy(enemyType);
+        m_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
 
     private void OnCollisionEnter(Collision p_collision)
     {
@@ -68,7 +64,7 @@ public class EnemyLife : MonoBehaviour
         m_life -= p_damage;        
         if (m_life <= 0)
         {
-            
+ 
             StartCoroutine("IDeathWait");
         }
     }  
@@ -86,5 +82,6 @@ public class EnemyLife : MonoBehaviour
         GameManager.Instance.PlayerScore(m_enemyDropPoints);
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
+        m_gameManager.m_defeatedEnemies += 1;
     }
 }
