@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] m_spawnPoints;
     public List<GameObject> m_enemiesToSpawn;
     private int m_waveCount; 
-    private int m_wave;
+    public int m_wave;
     private int m_enemyType;
     private bool m_spawning;
     private int m_enemiesSpawned;
