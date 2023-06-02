@@ -18,6 +18,15 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private Quaternion m_enemyQuaternion;
     [SerializeField] private float m_degree;
     [SerializeField] private bool m_enemyAttack;
+
+
+    [SerializeField] private Transform m_raycastPointForward;
+    [SerializeField] private Transform m_raycastPointBackward;
+    [SerializeField] private float m_raycastDistance = 10f;
+    [SerializeField] private LayerMask m_raycastLayerMask;
+    private bool m_blockedVisionforward;
+    private bool m_blockedVisionbackward;
+
     private void Awake()
     {
         m_canAttack = m_attackCooldown;
@@ -28,19 +37,21 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {
         m_animator = GetComponent<Animator>();
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
         m_canAttack -= Time.deltaTime;      
-        EnemyBehaviorMovement();       
+        EnemyBehaviorMovement();
+        EnemyVisionRaycast();
+        EnemyVisionRaycastBackward();
     }
 
     private void EnemyBehaviorMovement()
-    {
-        if (Vector3.Distance(transform.position, m_playerTarget.transform.position) > m_distanceToChase)
+    {   
+        if (Vector3.Distance(transform.position, m_playerTarget.transform.position) > m_distanceToChase || EnemyVisionRaycast() == true )
         {
             m_enemyTimer += 1 * Time.deltaTime;
             if (m_enemyTimer >= 4)
@@ -66,8 +77,12 @@ public class EnemyBehavior : MonoBehaviour
             }
         }
         else
-        {
-            Chase();
+        { 
+            if (Vector3.Distance(transform.position, m_playerTarget.transform.position) < m_distanceToChase && EnemyVisionRaycast() == false || Vector3.Distance(transform.position, m_playerTarget.transform.position) < m_distanceToChase  && EnemyVisionRaycastBackward() == false)
+            {
+                Chase();
+            }
+           
         }
         
     }
@@ -78,23 +93,25 @@ public class EnemyBehavior : MonoBehaviour
         Quaternion l_newRotation = Quaternion.LookRotation(l_diffVector.normalized);
         transform.rotation = Quaternion.Lerp(transform.rotation, l_newRotation, m_enemySpeed * Time.deltaTime);
         if (m_distanceToChase > l_diffVector.magnitude && 1 < l_diffVector.magnitude)
-        Move(l_diffVector.normalized);
-        m_animator.SetBool("Run", true);   
-        
-        if( 2 > l_diffVector.magnitude)
         {
-            if (m_canAttack <= 0)
+            Move(l_diffVector.normalized);
+            m_animator.SetBool("Run", true);
+
+            if (2 > l_diffVector.magnitude)
             {
-                m_animator.SetBool("Attack", true);
-                m_canAttack = m_attackCooldown;
+                if (m_canAttack <= 0)
+                {
+                    m_animator.SetBool("Attack", true);
+                    m_canAttack = m_attackCooldown;
+
+                }
+                m_animator.SetBool("Run", false);
 
             }
-              m_animator.SetBool("Run", false);
-            
-        }
-        else
-        {
-            m_animator.SetBool("Attack", false);
+            else
+            {
+                m_animator.SetBool("Attack", false);
+            }
         }
     }
 
@@ -111,5 +128,39 @@ public class EnemyBehavior : MonoBehaviour
         m_enemyAttack = false; 
     }
 
-    
+    public bool EnemyVisionRaycast()
+    {
+        
+        Ray l_enemyRayForward = new Ray(m_raycastPointForward.transform.position, m_raycastPointForward.transform.forward);       
+        Debug.DrawRay(l_enemyRayForward.origin, l_enemyRayForward.direction * m_raycastDistance, Color.green);        
+        m_blockedVisionforward = Physics.Raycast(l_enemyRayForward, out RaycastHit hit, m_raycastDistance, m_raycastLayerMask);
+       
+
+        if (m_blockedVisionforward || m_blockedVisionbackward)
+        {
+            Debug.Log(m_blockedVisionforward);
+        }
+        else
+        {
+            Debug.Log(m_blockedVisionforward || m_blockedVisionbackward);
+        }
+        return m_blockedVisionforward; 
+    }
+    public bool EnemyVisionRaycastBackward()
+    {
+        Ray l_enemyRayBackward = new Ray(m_raycastPointBackward.transform.position, m_raycastPointBackward.transform.forward);
+        Debug.DrawRay(l_enemyRayBackward.origin, l_enemyRayBackward.direction * m_raycastDistance, Color.green);
+        m_blockedVisionbackward = Physics.Raycast(l_enemyRayBackward, out RaycastHit lhit, m_raycastDistance, m_raycastLayerMask);
+        if ( m_blockedVisionbackward)
+        {
+            Debug.Log(m_blockedVisionbackward);
+        }
+        else
+        {
+            Debug.Log(m_blockedVisionbackward);
+        }
+        return m_blockedVisionbackward;
+    }
+
+
 }
