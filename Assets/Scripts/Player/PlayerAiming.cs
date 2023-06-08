@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+
 public class PlayerAiming : MonoBehaviour
 {
     [SerializeField] Animator m_animator;
@@ -21,14 +22,18 @@ public class PlayerAiming : MonoBehaviour
     {
         m_fCam = GetComponentInChildren<CinemachineFreeLook>();
         m_animator.GetComponent<Animator>();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
         AimingPlayer();
-        ShowCursor(false);
-       
+       if (Time.timeScale == 1f)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     private void AimingPlayer() 
@@ -46,11 +51,7 @@ public class PlayerAiming : MonoBehaviour
         }
     }
 
-    private void ShowCursor(bool p_showCursor)
-    {
-        Cursor.visible = p_showCursor;
-        Cursor.lockState = p_showCursor ? CursorLockMode.Locked : CursorLockMode.Locked;
-    }
+ 
 
 
 
