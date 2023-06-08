@@ -20,6 +20,8 @@ public class PlayerLife : MonoBehaviour
     public Action<float> OnDamageEvent;
     public Action<float> OnHealEvent;
 
+    public event EventHandler m_OnPlayerDeath;
+
 
     private void Awake()
     {
@@ -67,6 +69,7 @@ public class PlayerLife : MonoBehaviour
         Debug.Log(this);
         if (m_life <= 0 )
         {
+            m_OnPlayerDeath?.Invoke(this,EventArgs.Empty);
             StartCoroutine("IPlayerDeathWait");
         }
     }
