@@ -17,7 +17,7 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private float m_enemyTimer;
     [SerializeField] private Quaternion m_enemyQuaternion;
     [SerializeField] private float m_degree;
-    [SerializeField] private bool m_enemyAttack;
+    //[SerializeField] private bool m_enemyAttack;
 
 
     [SerializeField] private Transform m_raycastPointForward;
@@ -125,7 +125,7 @@ public class EnemyBehavior : MonoBehaviour
     private void FinalAttackAnimation()
     {
         m_animator.SetBool("Attack", false);
-        m_enemyAttack = false; 
+        //m_enemyAttack = false; 
     }
 
     public bool EnemyVisionRaycast()
