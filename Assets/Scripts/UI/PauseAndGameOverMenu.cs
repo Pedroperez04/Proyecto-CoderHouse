@@ -67,7 +67,7 @@ public class PauseAndGameOverMenu : MonoBehaviour
 
     public void ExitGameInGameOverMenu()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 
