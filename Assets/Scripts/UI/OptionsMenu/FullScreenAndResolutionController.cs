@@ -49,12 +49,13 @@ public class FullScreenAndResolutionController : MonoBehaviour
         m_resolutionDropdown.AddOptions(l_options);
         m_resolutionDropdown.value = l_currentResolution;
         m_resolutionDropdown.RefreshShownValue();
+
         m_resolutionDropdown.value = PlayerPrefs.GetInt("ResolutionNumber", 0);
     }
 
     public void ChangeResolution(int p_indResolution)
     {
-        PlayerPrefs.SetInt("ResolutionNumbers", m_resolutionDropdown.value);
+        PlayerPrefs.SetInt("ResolutionNumber", m_resolutionDropdown.value);
         Resolution l_resolution = m_resols[p_indResolution];
         Screen.SetResolution(l_resolution.width, l_resolution.height,Screen.fullScreen);
     }
