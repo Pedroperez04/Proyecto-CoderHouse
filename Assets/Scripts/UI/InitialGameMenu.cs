@@ -8,6 +8,7 @@ public class InitialGameMenu : MonoBehaviour
     public void PlayButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1.0f;
     }
 
     public void QuitButton()

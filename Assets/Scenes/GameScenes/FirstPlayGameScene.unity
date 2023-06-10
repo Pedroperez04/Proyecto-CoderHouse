@@ -670,7 +670,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.30973393, y: -0.01017445, z: 0.0033145726, w: 0.95076305}
+  m_LocalRotation: {x: 0.30972567, y: -0.012316959, z: 0.004012546, w: 0.9507378}
   m_LocalPosition: {x: -0.022, y: 3.786, z: -10.2560005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1238,7 +1238,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 461382691}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2079871356}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1389614618}
+        m_TargetAssemblyTypeName: InGameOptionsController, Assembly-CSharp
+        m_MethodName: ShowOptionsInGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &461382691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,19 +1480,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1066296856, guid: 2b388a99a3c27974a99a267e31d6a908, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9185777
+      value: 0.91912854
       objectReference: {fileID: 0}
     - target: {fileID: 1066296856, guid: 2b388a99a3c27974a99a267e31d6a908, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.29924873
+      value: 0.29942825
       objectReference: {fileID: 0}
     - target: {fileID: 1066296856, guid: 2b388a99a3c27974a99a267e31d6a908, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.24549763
+      value: 0.24342702
       objectReference: {fileID: 0}
     - target: {fileID: 1066296856, guid: 2b388a99a3c27974a99a267e31d6a908, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.07997675
+      value: -0.079302214
       objectReference: {fileID: 0}
     - target: {fileID: 1874010317, guid: 2b388a99a3c27974a99a267e31d6a908, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3274,6 +3298,51 @@ Transform:
   m_Father: {fileID: 519802668}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1389614616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1389614617}
+  - component: {fileID: 1389614618}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1389614617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389614616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1024.7015, y: 510.46838, z: -1.9319315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1389614618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389614616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8c208cc0b333f48973cd7b2d49671b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_optionsManager: {fileID: 0}
 --- !u!1 &1430304521
 GameObject:
   m_ObjectHideFlags: 0
