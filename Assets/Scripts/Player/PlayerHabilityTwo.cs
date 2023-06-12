@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHabilityOne : PlayerHabilities
+public class PlayerHabilityTwo : PlayerHabilities
 {
-
 
     private void Awake()
     {
+        m_habilityCooldown = 6f;
         m_canShoot = m_habilityCooldown;
     }
-
 
     // Start is called before the first frame update
     void Start()
@@ -24,15 +23,15 @@ public class PlayerHabilityOne : PlayerHabilities
         m_canShoot -= Time.deltaTime;
         if (m_canShoot <= 0)
         {
-            NormalShoot();
+            SpecialShoot();
         }
     }
 
-    private void NormalShoot()
+    private void SpecialShoot()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            m_Animator.SetBool("Shooting", true);
+            m_Animator.SetBool("ShootingTwo", true);
             StartCoroutine("INormalShootWait");
 
 
@@ -48,12 +47,8 @@ public class PlayerHabilityOne : PlayerHabilities
             {
                 m_HabilityImage.fillAmount = 0;
             }
-           
-            m_Animator.SetBool("Shooting", false);
+            
+            m_Animator.SetBool("ShootingTwo", false);
         }
     }
-
-
-
-
 }
