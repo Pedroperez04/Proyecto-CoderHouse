@@ -332,6 +332,37 @@ MonoBehaviour:
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
+--- !u!1 &1036428536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1036428537}
+  m_Layer: 6
+  m_Name: 'ShootingHab2Point '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1036428537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036428536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.827, y: 1.269, z: 1.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4006394765002155464}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1066296854
 GameObject:
   m_ObjectHideFlags: 3
@@ -356,7 +387,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066296854}
-  m_LocalRotation: {x: 0.2992472, y: 0.24551521, z: -0.07998248, w: 0.9185729}
+  m_LocalRotation: {x: 0.29942825, y: 0.24342702, z: -0.079302214, w: 0.91912854}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -573,7 +604,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874010315}
-  m_LocalRotation: {x: 0.20958823, y: 0.24552293, z: -0.054459754, w: 0.94489443}
+  m_LocalRotation: {x: 0.20958823, y: 0.2455229, z: -0.054459743, w: 0.94489443}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1924,6 +1955,7 @@ GameObject:
   - component: {fileID: 174212486}
   - component: {fileID: 3123528846925866320}
   - component: {fileID: 8683708880741301798}
+  - component: {fileID: 3603142777686680771}
   m_Layer: 6
   m_Name: Wizard
   m_TagString: Player
@@ -1949,6 +1981,7 @@ Transform:
   - {fileID: 651762008736219889}
   - {fileID: 1663600855}
   - {fileID: 4185990832972484572}
+  - {fileID: 1036428537}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2108,6 +2141,7 @@ MonoBehaviour:
   m_life: 100
   m_maxLife: 100
   m_lifeBar: {fileID: 0}
+  m_heal: 2
   m_enemyAttacks: {fileID: 1358361739, guid: 03228ebb154d829419e0ed3940352524, type: 3}
 --- !u!114 &8683708880741301798
 MonoBehaviour:
@@ -2125,6 +2159,23 @@ MonoBehaviour:
   m_Bullet: {fileID: -4823631052070810403, guid: 9d4c32ae21e86754092ba2e90b16bb41,
     type: 3}
   m_shootingPoint: {fileID: 651762008736219889}
+  m_HabilityImage: {fileID: 0}
+--- !u!114 &3603142777686680771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382638381549518706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6812e05f62734b448a05869ba672936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 7023854118520094642}
+  m_Bullet: {fileID: 2229287214994390899, guid: 4a5819bd580894245beba72b9ee9aca1,
+    type: 3}
+  m_shootingPoint: {fileID: 1036428537}
   m_HabilityImage: {fileID: 0}
 --- !u!1 &4502831391019723606
 GameObject:

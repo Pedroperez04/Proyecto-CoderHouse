@@ -18,6 +18,7 @@ public class EnemyLife : MonoBehaviour
 
     public PlayerBullets m_normalBullet;
     private float m_normalShootDamage;
+    private float m_specialShootDamage;
 
     public int m_enemyDropPoints;
     public EnemyLifeData m_dropPointsData;
@@ -29,6 +30,7 @@ public class EnemyLife : MonoBehaviour
     void Start()
     {        
         m_normalShootDamage = m_normalBullet.m_normalShootDamage;
+        m_specialShootDamage = m_normalBullet.m_specialShootDamage;
         ChooseEnemy(enemyType);
         m_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         m_scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
@@ -51,6 +53,21 @@ public class EnemyLife : MonoBehaviour
 
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponentInParent<PlayerBullets>())
+        {
+            PlayerBullets l_playerBulletTwo = other.gameObject.GetComponentInParent<PlayerBullets>();
+            if (l_playerBulletTwo != null)
+            {
+                StartCoroutine("IGetHitWait");
+                TakeDamage(m_specialShootDamage);
+                Debug.Log(m_specialShootDamage);
+            }
+        }
+    }
+
     private void ChooseEnemy(EnemyType enemyType)
     {
         switch (enemyType) 
