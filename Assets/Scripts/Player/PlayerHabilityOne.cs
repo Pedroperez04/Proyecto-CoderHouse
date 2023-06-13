@@ -22,7 +22,7 @@ public class PlayerHabilityOne : PlayerHabilities
     void Update()
     {
         m_canShoot -= Time.deltaTime;
-        if (m_canShoot <= 0)
+        if (m_canShoot <= 0 )
         {
             NormalShoot();
         }
@@ -38,6 +38,7 @@ public class PlayerHabilityOne : PlayerHabilities
 
             m_HabilityImage.fillAmount = 1;
             m_canShoot = m_habilityCooldown;
+            
         }
         else
         {

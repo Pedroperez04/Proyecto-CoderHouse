@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
@@ -9,24 +10,30 @@ public class PlayerLife : MonoBehaviour
 
     [SerializeField] public float m_life;
     [SerializeField] private float m_maxLife;
-    [SerializeField] private LifeBar m_lifeBar;
-    [SerializeField] private float m_heal = 2f;
-    private float m_healCooldown = 10f;
-    private float m_healTime;
+    [SerializeField] public LifeBar m_lifeBar;
     
     public EnemyBehavior m_enemyAttacks;
     private float m_enemyAttackDamage;
 
     public Action<float> OnDamageEvent;
-    public Action<float> OnHealEvent;
-
     public event EventHandler m_OnPlayerDeath;
+
+    public Transform m_healingPoint;
+
+
+    public Image m_healHabilityImage;
+    private float m_healing =4f;
+    private float m_healHabilityCooldown = 10f;
+    private float m_canHeal;
+
+    public PlayerHealAura m_healingAura;
+
 
 
     private void Awake()
     {
         OnDamageEvent += TakeDamage;
-        OnHealEvent += GetHeal;
+        m_canHeal = m_healHabilityCooldown;
     }
     // Start is called before the first frame update
     void Start()
@@ -34,20 +41,17 @@ public class PlayerLife : MonoBehaviour
         m_enemyAttackDamage = m_enemyAttacks.m_enemyDamage;
         m_life = m_maxLife;
         m_lifeBar.InitializeLifeBar(m_life);
-        m_healTime = m_healCooldown;
+        m_healHabilityImage.fillAmount = 0;
+
     }
 
     // Update is called once per frame
     void Update()
-    {
-        m_healTime -= Time.deltaTime;
-        if(m_healTime <= 0)
-        {
-            OnHealEvent(m_heal);
-            
-        }
+    {        
+        m_canHeal -= Time.deltaTime;
+       
+            GetHeal();
         
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -64,9 +68,6 @@ public class PlayerLife : MonoBehaviour
     {
         m_life -= p_damage;
         m_lifeBar.ChangeCurrentLife(m_life);
-        Debug.Log($"Damage Received: {p_damage}");
-        Debug.Log($"Current Life:{m_life}");
-        Debug.Log(this);
         if (m_life <= 0 )
         {
             m_OnPlayerDeath?.Invoke(this,EventArgs.Empty);
@@ -74,21 +75,32 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
-
-    private void GetHeal(float m_heal)
+    private void GetHeal()
     {
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (m_canHeal <= 0 && m_life < 100)
             {
-            m_life += m_heal;
-            m_healTime = m_healCooldown;
-            m_lifeBar.ChangeCurrentLife(m_life);
-            Debug.Log($"Heal Received: {m_heal}");
-            Debug.Log($"Current Life: {m_life}");
-            Debug.Log(this);
-
+                m_life += m_healing;
+                m_lifeBar.ChangeCurrentLife(m_life);
+                m_healHabilityImage.fillAmount = 1;
+                m_canHeal = m_healHabilityCooldown;
+                Instantiate(m_healingAura, m_healingPoint.position, m_healingPoint.rotation);
+                
+            }
+            
         }
-        
+        else
+        {
+            m_healHabilityImage.fillAmount -= 1 / m_healHabilityCooldown * Time.deltaTime;
+
+            if (m_healHabilityImage.fillAmount <= 0)
+            {
+                m_healHabilityImage.fillAmount = 0;
+            }
+        }
     }
+    
 
     IEnumerator IPlayerGetHitWait()
     {

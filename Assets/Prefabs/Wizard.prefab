@@ -1587,6 +1587,37 @@ Transform:
   m_Father: {fileID: 4555998104029448566}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2318621963669016190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7727969987060066279}
+  m_Layer: 6
+  m_Name: HealingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7727969987060066279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2318621963669016190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4006394765002155464}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2375608371110866711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +2013,7 @@ Transform:
   - {fileID: 1663600855}
   - {fileID: 4185990832972484572}
   - {fileID: 1036428537}
+  - {fileID: 7727969987060066279}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2141,8 +2173,11 @@ MonoBehaviour:
   m_life: 100
   m_maxLife: 100
   m_lifeBar: {fileID: 0}
-  m_heal: 2
   m_enemyAttacks: {fileID: 1358361739, guid: 03228ebb154d829419e0ed3940352524, type: 3}
+  m_healingPoint: {fileID: 7727969987060066279}
+  m_healHabilityImage: {fileID: 0}
+  m_healingAura: {fileID: 8259065292662337073, guid: 12a56ee4630040c4eb17ae9707ed4cef,
+    type: 3}
 --- !u!114 &8683708880741301798
 MonoBehaviour:
   m_ObjectHideFlags: 0
