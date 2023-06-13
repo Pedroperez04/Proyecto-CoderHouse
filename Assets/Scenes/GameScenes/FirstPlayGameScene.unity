@@ -1645,17 +1645,6 @@ PrefabInstance:
       objectReference: {fileID: 1935883598}
     - target: {fileID: 3123528846925866320, guid: 2b388a99a3c27974a99a267e31d6a908,
         type: 3}
-      propertyPath: m_healingAura
-      value: 
-      objectReference: {fileID: 8259065292662337073, guid: 12a56ee4630040c4eb17ae9707ed4cef,
-        type: 3}
-    - target: {fileID: 3123528846925866320, guid: 2b388a99a3c27974a99a267e31d6a908,
-        type: 3}
-      propertyPath: m_healingPoint
-      value: 
-      objectReference: {fileID: 1432041878}
-    - target: {fileID: 3123528846925866320, guid: 2b388a99a3c27974a99a267e31d6a908,
-        type: 3}
       propertyPath: m_healHabilityImage
       value: 
       objectReference: {fileID: 1721088918}
@@ -3576,12 +3565,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430304521}
   m_CullTransparentMesh: 1
---- !u!4 &1432041878 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7727969987060066279, guid: 2b388a99a3c27974a99a267e31d6a908,
-    type: 3}
-  m_PrefabInstance: {fileID: 535904772}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1467100493
 GameObject:
   m_ObjectHideFlags: 0
