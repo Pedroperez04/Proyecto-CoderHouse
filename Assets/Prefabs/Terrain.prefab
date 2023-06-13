@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3128372035140928537}
   - component: {fileID: 3128372035140928536}
   - component: {fileID: 826335827}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &826335827
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 3128372035345747426}
   - component: {fileID: 3128372035345747425}
   - component: {fileID: 613398184}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &613398184
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 3128372035505627665}
   - component: {fileID: 3128372035505627664}
   - component: {fileID: 1556916742}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1556916742
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 3128372035672146855}
   - component: {fileID: 3128372035672146854}
   - component: {fileID: 1276137975}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1276137975
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 3128372035854024392}
   - component: {fileID: 3128372035854024399}
   - component: {fileID: 382173688}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +692,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &382173688
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 3128372036361669626}
   - component: {fileID: 3128372036361669625}
   - component: {fileID: 2022550251}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -818,7 +818,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &2022550251
@@ -861,7 +861,7 @@ GameObject:
   - component: {fileID: 3128372036597410185}
   - component: {fileID: 3128372036597410184}
   - component: {fileID: 86978222}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +944,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &86978222
@@ -987,7 +987,7 @@ GameObject:
   - component: {fileID: 3128372036694122848}
   - component: {fileID: 3128372036694122855}
   - component: {fileID: 1781031241}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1070,7 +1070,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1781031241
@@ -1113,7 +1113,7 @@ GameObject:
   - component: {fileID: 3128372036838536857}
   - component: {fileID: 3128372036838536856}
   - component: {fileID: 1596157891}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1196,7 +1196,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1596157891
@@ -1239,7 +1239,7 @@ GameObject:
   - component: {fileID: 3128372036839453641}
   - component: {fileID: 3128372036839453640}
   - component: {fileID: 1611902334}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1322,7 +1322,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1611902334
@@ -1365,7 +1365,7 @@ GameObject:
   - component: {fileID: 3128372036866765674}
   - component: {fileID: 3128372036866765673}
   - component: {fileID: 912063433}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1448,7 +1448,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &912063433
@@ -1491,7 +1491,7 @@ GameObject:
   - component: {fileID: 3128372037002589878}
   - component: {fileID: 3128372037002589877}
   - component: {fileID: 242054793}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1574,7 +1574,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &242054793
@@ -1617,7 +1617,7 @@ GameObject:
   - component: {fileID: 3128372037009048485}
   - component: {fileID: 3128372037009048484}
   - component: {fileID: 1045040581}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1700,7 +1700,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1045040581
@@ -1743,7 +1743,7 @@ GameObject:
   - component: {fileID: 3128372037084403809}
   - component: {fileID: 3128372037084403808}
   - component: {fileID: 1390234254}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: OutZone (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1826,7 +1826,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1390234254
