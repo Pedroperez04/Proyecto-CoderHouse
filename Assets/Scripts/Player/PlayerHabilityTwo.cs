@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerHabilityTwo : PlayerHabilities
 {
+    
 
     private void Awake()
     {
+        
         m_habilityCooldown = 6f;
         m_canShoot = m_habilityCooldown;
     }
@@ -22,7 +24,7 @@ public class PlayerHabilityTwo : PlayerHabilities
     {
         m_canShoot -= Time.deltaTime;
         if (m_canShoot <= 0)
-        {
+        {            
             SpecialShoot();
         }
     }
@@ -31,14 +33,15 @@ public class PlayerHabilityTwo : PlayerHabilities
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            m_Animator.SetBool("ShootingTwo", true);
-            StartCoroutine("INormalShootWait");
-
 
             m_HabilityImage.fillAmount = 1;
             m_canShoot = m_habilityCooldown;
+
+            m_Animator.SetBool("ShootingTwo", true);
+            StartCoroutine("INormalShootWait");                     
+            
         }
-        else
+       else
         {
 
             m_HabilityImage.fillAmount -= 1 / m_habilityCooldown * Time.deltaTime;
