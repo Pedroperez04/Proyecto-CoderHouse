@@ -28,10 +28,12 @@ public class PlayerLife : MonoBehaviour
 
     public PlayerHealAura m_healingAura;
 
-
+    public EnemyBullets m_enemyBullet;
+    private float m_enemyShootingDamage;
 
     private void Awake()
     {
+        m_enemyShootingDamage = m_enemyBullet.m_normalShootDamage;
         OnDamageEvent += TakeDamage;
         m_canHeal = m_healHabilityCooldown;
     }
@@ -53,6 +55,23 @@ public class PlayerLife : MonoBehaviour
             GetHeal();
         
     }
+
+
+    private void OnCollisionEnter(Collision p_collision)
+    {
+        if (p_collision.gameObject.GetComponentInParent<EnemyBullets>())
+        {
+            EnemyBullets l_playerBullet = p_collision.gameObject.GetComponentInParent<EnemyBullets>();
+            if (l_playerBullet != null)
+            {
+                StartCoroutine("IPlayerGetHitWait");
+                TakeDamage(m_enemyShootingDamage);
+                Destroy(p_collision.gameObject);
+            }
+
+        }
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
