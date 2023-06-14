@@ -151,7 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217411087}
-  m_LocalRotation: {x: 0.4142664, y: 0.24548166, z: -0.11708304, w: 0.8685699}
+  m_LocalRotation: {x: 0.41426644, y: 0.24548168, z: -0.11708306, w: 0.8685699}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -604,7 +604,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874010315}
-  m_LocalRotation: {x: 0.20958823, y: 0.2455229, z: -0.054459743, w: 0.94489443}
+  m_LocalRotation: {x: 0.20958824, y: 0.2455229, z: -0.054459754, w: 0.9448944}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2118,10 +2118,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.6695533
+  m_Radius: 0.473023
   m_Height: 1.834761
   m_Direction: 1
-  m_Center: {x: 0.03566408, y: 0.9367296, z: 0.0016084313}
+  m_Center: {x: -0.037955582, y: 0.9367296, z: 0.021706104}
 --- !u!114 &1622916190065247806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2177,6 +2177,8 @@ MonoBehaviour:
   m_healingPoint: {fileID: 7727969987060066279}
   m_healHabilityImage: {fileID: 0}
   m_healingAura: {fileID: 8259065292662337073, guid: 12a56ee4630040c4eb17ae9707ed4cef,
+    type: 3}
+  m_enemyBullet: {fileID: -6407226140149834319, guid: f63c459b90ec4644ab46fb9f6de3136c,
     type: 3}
 --- !u!114 &8683708880741301798
 MonoBehaviour:
