@@ -415,6 +415,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &553728255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4366640094988912289, guid: 8624392c0bbf80743a36a7d0c3851b98,
+    type: 3}
+  m_PrefabInstance: {fileID: 4366640093499102244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &571478430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,6 +1042,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 553728255}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 951999067}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -1748,10 +1766,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 159074682}
-    - target: {fileID: 4366640094988912300, guid: 8624392c0bbf80743a36a7d0c3851b98,
+    - target: {fileID: 4366640094988912289, guid: 8624392c0bbf80743a36a7d0c3851b98,
         type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8624392c0bbf80743a36a7d0c3851b98, type: 3}
