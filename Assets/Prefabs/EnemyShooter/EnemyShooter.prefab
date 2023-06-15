@@ -968,8 +968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
-  m_animator: {fileID: 8920296591185415170, guid: c0bca25c7b8495148894ddbf910e7704,
-    type: 3}
+  m_animator: {fileID: 8439820400770633597}
   m_lifeData: {fileID: 11400000, guid: b4a8cd6d7c14f1d46a407ab8c2f283a0, type: 2}
   m_normalBullet: {fileID: -4823631052070810403, guid: 9d4c32ae21e86754092ba2e90b16bb41,
     type: 3}
@@ -989,8 +988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_distanceToChase: 10
   m_enemySpeed: 1
-  m_animator: {fileID: 8920296591185415170, guid: c0bca25c7b8495148894ddbf910e7704,
-    type: 3}
+  m_animator: {fileID: 8439820400770633597}
   m_enemyDamage: 20
   m_enemyRutine: 0
   m_enemyTimer: 0

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScenes/FirstPlayGameScene.unity
     guid: 1784ecfe6ea584e40be7bafa9b271847
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/SecondPlayGameScene.unity
+    guid: 7c821ff4913fcb949b7e04f23dcc8730
   m_configObjects: {}
