@@ -7,6 +7,7 @@ public class ScoreManager : MonoBehaviour
 {
     private float m_points;
     private TextMeshProUGUI m_text;
+   
 
 
     private void Start()
@@ -17,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     private void Update()
     {
        
-        m_text.text = m_points.ToString("0");
+        m_text.text = m_points.ToString("0");        
 
     }
 
