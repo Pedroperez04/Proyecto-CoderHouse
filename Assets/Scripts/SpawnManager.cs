@@ -27,22 +27,6 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            for (int i = 0; i < m_spawnPoints.Length; i++)
-            {
-                Debug.Log(m_spawnPoints[i]);
-            }
-
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            
-                Debug.Log(m_enemiesToSpawn[m_enemiesToSpawn.Count - 1].name);
-            
-           
-        }
-
         if (m_spawning == false && m_enemiesSpawned == m_gameManager.m_defeatedEnemies)
         {
             StartCoroutine(ISpawnWave(m_waveCount));

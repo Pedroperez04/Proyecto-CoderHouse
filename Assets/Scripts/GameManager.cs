@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
            
         }
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
     }
     // Start is called before the first frame update
@@ -32,17 +32,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        CheckScene();
+       
     }
 
-    private void CheckScene()
-    {
-        var p_scene = SceneManager.GetActiveScene().buildIndex;
-        if (p_scene == 2)
-        {
-            m_defeatedEnemies = 0;
-        }
-    }
+  
     
 
 }
