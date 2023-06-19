@@ -31,10 +31,13 @@ public class EnemyShooterBehavior : MonoBehaviour
     public EnemyBullets m_bullets;
     public Transform m_shootingPoint;
 
+    [SerializeField] AudioSource m_fireBallAudioSource;
+
     private void Awake()
     {
         m_canAttack = m_attackCooldown;
         m_playerTarget = GameObject.Find("Wizard");
+        m_fireBallAudioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -172,7 +175,7 @@ public class EnemyShooterBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         var l_currentBullet = Instantiate(m_bullets, m_shootingPoint.position, m_shootingPoint.rotation);
-
+        m_fireBallAudioSource.Play();
     }
 
 }
