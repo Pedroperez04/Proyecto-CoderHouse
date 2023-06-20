@@ -94,7 +94,7 @@ MeshCollider:
   m_GameObject: {fileID: 4404536033698055733}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -113,6 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_portalRenderer: {fileID: 5192434827339724396}
   m_portalRenderer2: {fileID: 5192434827339724396}
+  m_portalCollider: {fileID: 8936778985625536052}
+  m_portalCollider2: {fileID: 1520890956}
 --- !u!1 &5077921828369027552
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +209,7 @@ SphereCollider:
   m_GameObject: {fileID: 5077921828369027552}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1.2401041
   m_Center: {x: 0.00050813454, y: 0.00000017881393, z: 0}
@@ -225,6 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_portalRenderer: {fileID: 195519409062298895}
   m_portalRenderer2: {fileID: 195519409062298895}
+  m_portalCollider: {fileID: 8936778985625536052}
+  m_portalCollider2: {fileID: 1520890956}
 --- !u!1 &8125822979606793936
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,3 +277,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_portalRenderer: {fileID: 5192434827339724396}
   m_portalRenderer2: {fileID: 195519409062298895}
+  m_portalCollider: {fileID: 8936778985625536052}
+  m_portalCollider2: {fileID: 1520890956}
