@@ -23,7 +23,7 @@ public class PauseAndGameOverMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             PauseGame();
         }
@@ -57,7 +57,7 @@ public class PauseAndGameOverMenu : MonoBehaviour
     {
        
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(1);
     }
 
     public void GoToInitialMenu()
