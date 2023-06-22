@@ -218,7 +218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Resume
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 848020b1c5ffe0e4a8505a53563e3c18, type: 2}
   m_sharedMaterial: {fileID: 5138527232762028018, guid: 848020b1c5ffe0e4a8505a53563e3c18,
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart
+  m_text: Reiniciar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 848020b1c5ffe0e4a8505a53563e3c18, type: 2}
   m_sharedMaterial: {fileID: 5138527232762028018, guid: 848020b1c5ffe0e4a8505a53563e3c18,
@@ -2455,7 +2455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Volver al menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 848020b1c5ffe0e4a8505a53563e3c18, type: 2}
   m_sharedMaterial: {fileID: 5138527232762028018, guid: 848020b1c5ffe0e4a8505a53563e3c18,
@@ -3851,7 +3851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Opciones
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 848020b1c5ffe0e4a8505a53563e3c18, type: 2}
   m_sharedMaterial: {fileID: 5138527232762028018, guid: 848020b1c5ffe0e4a8505a53563e3c18,
