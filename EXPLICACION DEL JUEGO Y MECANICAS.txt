@@ -1,0 +1,15 @@
+TEXTO DE EXPLICACION DEL JUEGO:
+
+Es un shooter en tercera persona por oleadas, en el cual el personaje es
+un mago de fuego el cual al al ir derrotando a los enemigos va avanzando de rondas.
+Hay dos niveles con 5 rondas cada nivel, en las que al ir aumentando la ronda aumenta la cantidad de enemigos.
+Al terminar las 5 rondas se desbloquea un cubo violeta en el piso que refleja, y al pisarlo activa un portal
+para pasar al siguiente nivel.
+
+Las mecanicas del juego son:
+Se mueve con WASD.
+Corre con el Shift izquierdo y se agacha con el Control izquierdo.
+Tiene 3 habilidades, la basica se dispara con el Click izquierdo del Mouse, la segunda habilidad se dispara con
+la Q, y la tercera habilidad se usa con la E, pero solamente si el personaje tiene menos de 100 de vida.
+Ademas con el Click derecho del Mouse se puede hacer un Zoom a la camara.
+Para acceder al Menu de Pausa se puede tocando la P o el Escape.
